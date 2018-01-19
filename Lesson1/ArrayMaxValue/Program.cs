@@ -11,7 +11,7 @@ namespace ArrayMaxValue
         static void Main(string[] args)
         {
             int[] Array = { 1, 2, 2, 3, 5, 8, 10 };
-
+            Console.WriteLine("Максимальне значення масива: " + GetArrayMaxVal(Array));
         }
 
         static int GetArrayMaxVal(int[] array)
@@ -20,7 +20,10 @@ namespace ArrayMaxValue
             for (int i = 0; i < array.Length; i++)
             {
                 if (array[i] > max)
+                {
                     max = array[i];
+                    Console.WriteLine("max = " + array[i] );
+                }
             }
             return max;
         }
