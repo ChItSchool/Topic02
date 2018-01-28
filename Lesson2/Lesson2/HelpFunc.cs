@@ -45,7 +45,7 @@ namespace Lesson2
             Random random = new Random();
 
             for (int i = 0; i < array.Length; i++)
-                array[i] = random.Next();
+                array[i] = random.Next(9);
 
             return array;
         }

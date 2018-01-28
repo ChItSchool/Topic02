@@ -10,23 +10,34 @@ namespace Lesson2
     {
         static void Main(string[] args)
         {
-            int[] array = HelpFunc.GetRandomArray(5);
+            int[] array = HelpFunc.GetRandomArray(500);
             HelpFunc.PrintArray(array);
             Console.WriteLine();
-            Console.WriteLine(GetMinPos(array));
+            HelpFunc.PrintArray(SelectionSort(array));
             Console.ReadKey();
+        }
+
+        static int[] SelectionSort(int[] array)
+        {
+            for (int i = 0; i < array.Length; i++)
+            {
+                int MinPos = GetMinPos(array, i, array.Length - 1);
+                int a = array[i];
+                array[i] = array[MinPos];
+                array[MinPos] = a;
+            }
+            return array;
         }
 
         /// <summary>
         /// Видає позицію мінімального значення
         /// </summary>
         /// <returns></returns>
-        static int GetMinPos(int [] array)
+        static int GetMinPos(int [] array, int minPos, int maxPos)
         {
+            int pos = minPos;
 
-            int pos = 0;
-
-            for (int i = 0; i < array.Length; i++)
+            for (int i = minPos; i <= maxPos; i++)
             {
                 if (array[i] < array[pos])
                 {
