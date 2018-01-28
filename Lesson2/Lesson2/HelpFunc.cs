@@ -27,7 +27,7 @@ namespace Lesson2
 
                 Console.Write(array[i]);
 
-                if ( i+1 >= array.Length)
+                if ( i+1  < array.Length)
                     Console.Write(", ");
                 else
                     Console.Write(".");
