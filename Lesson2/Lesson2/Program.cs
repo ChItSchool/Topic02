@@ -10,7 +10,7 @@ namespace Lesson2
     {
         static void Main(string[] args)
         {
-            int[] array = HelpFunc.GetRandomArray(500);
+            int[] array = HelpFunc.GetRandomArray(50);
             HelpFunc.PrintArray(array);
             Console.WriteLine();
             HelpFunc.PrintArray(SelectionSort(array));
